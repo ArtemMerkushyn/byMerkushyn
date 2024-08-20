@@ -1,8 +1,11 @@
-import styles from './App.module.css';
+import styles from './styles/_main.scss';
+import { Header } from './components/header/Header';
 
 function App() {
   return (
-    <div className={styles.container}>App</div>
+    <div className={styles.container}>
+      <Header/>
+    </div>
   );
 }
 
