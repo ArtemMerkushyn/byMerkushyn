@@ -1,8 +1,24 @@
+// Width
+$max-width-container: 1620px;
+
 // Fonts
 $primary-font: "Roboto", sans-serif;
+
+// Font-sizes
+$font-size-xxs: 12px;
+$font-size-xs: 14px;
+$font-size-sm: 16px;
+$font-size-md: 18px;
+$font-size-lg: 20px;
+$font-size-xl: 24px;
+$font-size-xxl: 30px;
 
 // Color
 $primary-color: #FFFFFF;
 
-//Background
+// Background
 $primary-background: #000000;
+$primary-color-background: #FFFFFF;
+
+// paddings
+$padding-container: 5px;
