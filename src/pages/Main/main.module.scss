@@ -7,6 +7,7 @@
     align-items: center;
     justify-content: center;
     text-align: center;
+    position: relative;
 
     &__container {
         max-width: $max-width-container;
@@ -17,15 +18,15 @@
 
     &__content {
         span {
-            font-size: 32px;
-            line-height: 32px;
+            font-size: 2.8vw;
+            line-height: 2.8vw;
             text-transform: uppercase;
             font-weight: 500;
         }
 
         h1 {
-            font-size: 100px;
-            line-height: 100px;
+            font-size: 7vw;
+            line-height: 7vw;
             text-transform: uppercase;
             color: transparent;
             -webkit-text-stroke: 2px $primary-color;
@@ -33,10 +34,10 @@
         }
 
         p {
-            font-size: 28px;
-            line-height: 32px;
+            font-size: 2.8vw;
+            line-height: 2.8vw;
             font-weight: 500;
-            max-width: 500px;
+            max-width: 50vw;
             width: 100%;
             margin: 0 auto;
         }
@@ -47,7 +48,8 @@
         top: 80%;
         left: 0;
         transform: translateY(-80%);
-        height: 80vh;
+        height: auto;
+        width: 25vw;
         z-index: -1;
     }
 
@@ -56,33 +58,37 @@
         top: 40%;
         right: 0;
         transform: translateY(-40%);
-        height: 60vh;
+        // height: 60vh;
+        height: auto;
+        width: 25vw;
         z-index: -1;
     }
 }
 
-@media (max-width: 1313px) {
+@media (min-width: 1200px) {
+    .hero{
+        &__content {
+            span {
+                font-size: 28px;
+                line-height: 32px;
+            }
+    
+            h1 {
+                font-size: 100px;
+                line-height: 100px;
+            }
+    
+            p {
+                font-size: 28px;
+                line-height: 32px;
+                max-width: 500px;
+            }
+        }
+    }
+}
+
+@media (max-width: 1366px) and (min-height: 500px) {
     .hero {
-        display: block;
-        height: auto;
-        margin-top: 150px;
-
-        &__img1 {
-            display: block;
-            position: static;
-            margin-right: auto;
-            transform: translateY(0);
-            height: auto;
-            width: 50vw;
-        }
-
-        &__img2 {
-            display: block;
-            position: static;
-            margin-left: auto;
-            transform: translateY(0);
-            width: 40vw;
-            height: auto;
-        }
+        height: 500px;
     }
 }
