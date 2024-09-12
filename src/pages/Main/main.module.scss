@@ -92,3 +92,57 @@
         height: 500px;
     }
 }
+
+@media (max-width: 700px) and (min-height: 500px) {
+    .hero {
+        height: 300px;
+    }
+}
+
+@media (max-width: 600px) {
+    .hero {
+        height: auto;
+        display: block;
+        text-align: left;
+        
+        &__container {
+            text-align: center;
+            padding-top: 80px;
+        }
+
+        &__content {
+            margin-bottom: 20px;
+
+            span {
+                font-size: 20px;
+                line-height: 20px;
+            }
+
+            h1 {
+                font-size: 50px;
+                line-height: 50px;
+            }
+
+            p {
+                max-width: 325px;
+                width: 100%;
+                font-size: 20px;
+                line-height: 26px;
+            }
+        }
+
+        &__img1 {
+            position: static;
+            transform: translateY(0);
+        }
+
+        &__img1 {
+            width: 50vw;
+        }
+
+        &__img2 {
+            top: 80%;
+            width: 40vw;
+        }
+    }
+}
