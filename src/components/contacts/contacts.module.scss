@@ -1,0 +1,13 @@
+@import '../../styles/variables';
+
+.contacts {
+    display: flex;
+    justify-content: center;
+    gap: 25px;
+
+    svg {
+        fill: $primary-color;
+        width: 36px;
+        height: 36px;
+    }
+}

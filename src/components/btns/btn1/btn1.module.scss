@@ -20,6 +20,10 @@
         cursor: pointer;
         transition: all .2s linear;
 
+        svg {
+            fill: $primary-background;
+        }
+
         &:hover {
             background: rgba($color: $primary-color, $alpha: .8);
         }
