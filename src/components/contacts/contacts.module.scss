@@ -9,5 +9,19 @@
         fill: $primary-color;
         width: 36px;
         height: 36px;
+        transition: all .2s linear;
+
+        &:hover {
+            opacity: .8;
+        }
+    }
+}
+
+@media (max-width: 768px) {
+    .contacts {
+        svg {
+            width: 28px;
+            height: 28px;
+        }
     }
 }
