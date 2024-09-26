@@ -92,6 +92,22 @@ const Icons = ({ icon }) => {
             </g>
         </svg>
       ),
+      mause: (
+        <svg width="48.000000" height="48.000000" viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg">
+	<desc>
+			Created with Pixso.
+	</desc>
+	<defs>
+		<clipPath id="clip205_236">
+			<rect id="mouse" rx="-0.500000" width="47.000000" height="47.000000" transform="translate(0.500000 0.500000)" fill="white" fill-opacity="0"/>
+		</clipPath>
+	</defs>
+	<rect id="mouse" rx="-0.500000" width="47.000000" height="47.000000" transform="translate(0.500000 0.500000)"  fill-opacity="0"/>
+	<g clip-path="url(#clip205_236)">
+		<path id="Vector" d="M40 17.93C39.91 9.14 32.8 2.07 24 2.07C15.2 2.07 8.07 9.14 8 17.93L8 29.93C8 38.77 15.16 45.93 24 45.93C32.84 45.93 40 38.77 40 29.93L40 17.93ZM36 17.93L26 17.93L26 6.25C31.62 7.19 35.91 12.05 36 17.93ZM22 6.25L22 17.93L12 17.93C12.08 12.05 16.37 7.19 22 6.25ZM36 29.93C36 36.55 30.62 41.93 24 41.93C17.37 41.93 12 36.55 12 29.93L12 21.93L36 21.93L36 29.93Z" fill-opacity="1.000000" fill-rule="evenodd"/>
+	</g>
+</svg>
+      ),
   };
 
   return icons[icon];

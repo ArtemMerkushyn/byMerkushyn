@@ -1,5 +1,6 @@
 import { Btn1 } from '../../components/btns/btn1/Btn1.jsx';
 import { Contacts } from '../../components/contacts/Contacts.jsx';
+import Icons from '../../components/Icons/Icons.jsx';
 import styles from './main.module.scss';
 
 export const Main = () => {
@@ -16,6 +17,11 @@ export const Main = () => {
             </div>
             <img className={styles.hero__img1} src="/img/hero/hero1.png" alt="hero" />
             <img className={styles.hero__img2} src="/img/hero/hero2.png" alt="hero" />
+            <div className={styles.hero__mause}>
+                <Icons icon={'mause'}/>
+                <div className={styles.hero__mausearrov}></div>
+                <div className={styles.hero__mausearrov}></div>
+            </div>
         </section>
     );
 }
