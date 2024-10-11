@@ -1,0 +1,12 @@
+@import '../../styles/variables';
+
+.title {
+    padding: 0;
+    span {
+        display: inline-block;
+        font-size: $font-size-xxl;
+        line-height: calc($font-size-xxl + 10px);
+        color: $primary-color;
+        border-bottom: 2px solid $primary-color;
+    }
+}
