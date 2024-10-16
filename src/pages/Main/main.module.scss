@@ -165,11 +165,11 @@
         }
 
         p {
-            font-size: 30px;
-            line-height: 36px;
+            font-size: $font-size-lg;
+            line-height: $font-size-xxl;
             margin-bottom: 20px;
             display: -webkit-box;
-            -webkit-line-clamp: 7;
+            -webkit-line-clamp: 9;
             -webkit-box-orient: vertical;
             overflow: hidden;
             text-overflow: ellipsis;
