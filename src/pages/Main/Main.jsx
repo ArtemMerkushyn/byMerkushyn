@@ -42,7 +42,7 @@ export const Main = () => {
                                 <ArrowLink text={'More info'} url={'https://artemmerkushyn.github.io/furni-shop/#hero'}/>
                             </div>
                             <div className={styles.project__item}>
-                                <img src="https://www.celoxis.com/cassets/img/pmc/project-management.png" alt="img" />
+                                <img src={project.img} alt="img" />
                             </div>
                         </div> 
                     ))}
