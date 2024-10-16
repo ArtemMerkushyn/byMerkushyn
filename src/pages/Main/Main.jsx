@@ -1,10 +1,10 @@
-import { Link } from 'react-router-dom';
 import { Btn1 } from '../../components/btns/btn1/Btn1.jsx';
 import { Btn2 } from '../../components/btns/btn2/Btn2.jsx';
 import { Contacts } from '../../components/contacts/Contacts.jsx';
 import Icons from '../../components/Icons/Icons.jsx';
 import { Title } from '../../components/title/Title.jsx';
 import styles from './main.module.scss';
+import { ArrowLink } from '../../components/arrowLink/ArrowLink.jsx';
 
 export const Main = () => {
     return (
@@ -38,7 +38,7 @@ export const Main = () => {
                         </p>
                         <Btn2 text={'visit app website'} url={'https://www.celoxis.com/cassets/img/pmc/project-management.png'}/>
                         <br/>
-                        <Link className={styles.project__link} to={'/'}>More info</Link>
+                        <ArrowLink text={'More info'}/>
                     </div>
                     <div className={styles.project__item}>
                         <img src="https://www.celoxis.com/cassets/img/pmc/project-management.png" alt="img" />

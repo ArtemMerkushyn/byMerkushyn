@@ -1,0 +1,46 @@
+@import '../../styles/variables';
+
+.link {
+    display: inline-block;
+    font-size: $font-size-md;
+    line-height: $font-size-xl;
+    text-transform: uppercase;
+    background: $primary-background;
+    position: relative;
+    padding-right: 20px;
+    padding-bottom: 2px;
+    overflow: hidden;
+
+    &:hover:before {
+        right: 4px;
+        opacity: 1;
+    }
+
+    &:hover::after {
+        transform: translateX(0);
+    }
+
+    &::before {
+        content: '>';
+        font-size: 24px;
+        line-height: 34px;
+        position: absolute;
+        top: 12%;
+        right: 12px;
+        opacity: 0;
+        transition: all .3s linear;
+    }
+
+    &::after {
+        content: '';
+        position: absolute;
+        bottom: 4px;
+        left: 0;
+        height: 2px;
+        width: 94%;
+        background: $primary-color;
+        border-radius: 50px;
+        transform: translateX(-100%);
+        transition: all .2s linear;
+    }
+}
