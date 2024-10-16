@@ -156,6 +156,10 @@
     display: flex;
     gap: 20px;
 
+    &:not(:last-child) {
+        margin-bottom: 50px;
+    }
+
     &__item {
         width: 50%;
 
@@ -183,7 +187,9 @@
             width: 100%;
             max-height: 450px;
             height: 100%;
-            object-fit: contain;
+            // object-fit: contain;
+            object-fit: cover;
+            border-radius: 10px;
         }
     }
 
