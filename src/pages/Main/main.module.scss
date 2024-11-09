@@ -149,38 +149,28 @@
     h3 {
         margin-bottom: 40px;
     }
+
+    &__items {
+        display: flex;
+        gap: 20px;
+        flex-wrap: wrap;
+    }
 }
 
 .project {
-    width: 100%;
-    display: flex;
-    gap: 20px;
+    width: 48%;
 
     &:not(:last-child) {
         margin-bottom: 50px;
     }
 
     &__item {
-        width: 50%;
+        width: 100%;
 
         h5 {
-            font-size: 70px;
-            line-height: 80px;
-        }
-
-        p {
-            font-size: $font-size-lg;
-            line-height: $font-size-xxl;
-            margin-bottom: 20px;
-            display: -webkit-box;
-            -webkit-line-clamp: 9;
-            -webkit-box-orient: vertical;
-            overflow: hidden;
-            text-overflow: ellipsis;
-        }
-
-        button {
-            margin-bottom: 20px;
+            font-size: 40px;
+            line-height: 46px;
+            margin-bottom: 10px;
         }
 
         img {
@@ -191,6 +181,12 @@
             object-fit: cover;
             border-radius: 10px;
         }
+    }
+
+    &__links {
+        display: flex;
+        align-items: center;
+        gap: 10px;
     }
 
     &__link {
