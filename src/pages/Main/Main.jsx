@@ -29,25 +29,27 @@ export const Main = () => {
                 </div>
             </section>
 
+            <div className={styles.container}>
             <section className={styles.projects}>
-                <Title text={'Projects'} align={'center'}/>
-                <div className={styles.projects__items}>
-                    {projects.map((project) => (
-                       <div key={project.id} className={styles.project}>
-                            <div className={styles.project__item}>
-                                <img src={project.img} alt="img" />
-                            </div>
-                            <div className={styles.project__item}>
-                                <h5 className={styles.project__title}>{project.title}</h5>
-                                <div className={styles.project__links}>
-                                    <Btn2 text={'visit app website'} url={project.link}/>
-                                    <ArrowLink text={'More info'} url={'https://artemmerkushyn.github.io/furni-shop/#hero'}/>
+                    <Title text={'Projects'} align={'center'}/>
+                    <div className={styles.projects__items}>
+                        {projects.map((project) => (
+                        <div key={project.id} className={styles.project}>
+                                <div className={styles.project__item}>
+                                    <img src={project.img} alt="img" />
                                 </div>
-                            </div>
-                        </div> 
-                    ))}
-                </div>
+                                <div className={styles.project__item}>
+                                    <h5 className={styles.project__title}>{project.title}</h5>
+                                    <div className={styles.project__links}>
+                                        <Btn2 text={'visit app website'} url={project.link}/>
+                                        <ArrowLink text={'More info'} url={'https://artemmerkushyn.github.io/furni-shop/#hero'}/>
+                                    </div>
+                                </div>
+                            </div> 
+                        ))}
+                    </div>
             </section>
+            </div>
         </>
     );
 }
