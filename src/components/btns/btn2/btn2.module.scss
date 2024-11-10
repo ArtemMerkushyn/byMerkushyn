@@ -30,3 +30,12 @@
         }
     }
 }
+
+@media (max-width: 425px) {
+    .btn {
+        &__link {
+            font-size: $font-size-xs;
+            padding: 5px 10px;
+        }
+    }
+}

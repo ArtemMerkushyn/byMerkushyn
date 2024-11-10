@@ -3,7 +3,7 @@
 .link {
     display: inline-block;
     font-size: $font-size-md;
-    line-height: $font-size-xl;
+    line-height: calc($font-size-md + 5px);
     text-transform: uppercase;
     background: $primary-background;
     position: relative;

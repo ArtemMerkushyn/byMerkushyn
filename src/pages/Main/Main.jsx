@@ -17,7 +17,7 @@ export const Main = () => {
                         <h1>Artem<br/>Merkushyn</h1>
                         <p>Full stack developer, developing web applications from idea to implementation</p>
                     </div>
-                    <Btn1 text={'Take a look at Github'} url={'https://github.com/ArtemMerkushyn'}/>
+                    <Btn1 text={'Take a look at GitHub'} url={'https://github.com/ArtemMerkushyn'}/>
                     <Contacts/>
                 </div>
                 <img className={styles.hero__img1} src="/img/hero/hero1.png" alt="hero" />
@@ -30,25 +30,25 @@ export const Main = () => {
             </section>
 
             <div className={styles.container}>
-            <section className={styles.projects}>
-                    <Title text={'Projects'} align={'center'}/>
-                    <div className={styles.projects__items}>
-                        {projects.map((project) => (
-                        <div key={project.id} className={styles.project}>
-                                <div className={styles.project__item}>
-                                    <img src={project.img} alt="img" />
-                                </div>
-                                <div className={styles.project__item}>
-                                    <h5 className={styles.project__title}>{project.title}</h5>
-                                    <div className={styles.project__links}>
-                                        <Btn2 text={'visit app website'} url={project.link}/>
-                                        <ArrowLink text={'More info'} url={'https://artemmerkushyn.github.io/furni-shop/#hero'}/>
+                <section className={styles.projects}>
+                        <Title text={'Projects'} align={'center'}/>
+                        <div className={styles.projects__items}>
+                            {projects.map((project) => (
+                            <div key={project.id} className={styles.project}>
+                                    <div className={styles.project__item}>
+                                        <img src={project.img} alt="img" />
                                     </div>
-                                </div>
-                            </div> 
-                        ))}
-                    </div>
-            </section>
+                                    <div className={styles.project__item}>
+                                        <h5 className={styles.project__title}>{project.title}</h5>
+                                        <div className={styles.project__links}>
+                                            <Btn2 text={'visit app website'} url={project.link}/>
+                                            <ArrowLink text={'More info'} url={'https://artemmerkushyn.github.io/furni-shop/#hero'}/>
+                                        </div>
+                                    </div>
+                                </div> 
+                            ))}
+                        </div>
+                </section>
             </div>
         </>
     );
