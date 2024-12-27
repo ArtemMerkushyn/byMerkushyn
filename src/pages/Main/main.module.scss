@@ -465,15 +465,16 @@
     }
 }
 
-@media (max-width: 700px) and (min-height: 500px) {
-    .hero {
-        height: 300px;
-    }
-}
+// @media (max-width: 700px) and (min-height: 500px) {
+//     .hero {
+//         // height: 300px;
+//         height: calc(auto + 40px);
+//     }
+// }
 
-@media (max-width: 600px) {
+@media (max-width: 700px) {
     .hero {
-        height: auto;
+        padding-top: 80px;
         display: block;
         text-align: left;
         
