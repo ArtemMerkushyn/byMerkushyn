@@ -381,16 +381,6 @@
     }
 }
 
-@media (max-width: 1366px) and (min-height: 500px) {
-    .hero {
-        height: 500px;
-
-        &__mause {
-            display: none;
-        }
-    }
-}
-
 @media (max-width: 1366px) and (max-height: 500px) {
     .hero {
         min-height: 400px;
@@ -404,6 +394,12 @@
 }
 
 @media (max-width: 1024px) {
+    .hero {
+        &__mause {
+            display: none;
+        }
+    }
+
     .skills {
         &__wrapper {
             flex-direction: column-reverse;
