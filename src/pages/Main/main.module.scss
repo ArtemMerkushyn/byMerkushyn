@@ -246,21 +246,70 @@
 
     &__container {
         display: flex;
-        gap: 20px;
     }
 
     &__image {
-        width: 600px;
-        height: 600px;
+        width: 36%;
         
         & img {
             width: 100%;
-            height: 100%;
+            height: auto;
         }
     }
 
     &__items {
-        width: calc(100% - 600px);
+        width: 64%;
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+    }
+
+    &__img svg {
+        width: 100px;
+        height: auto;
+        display: block;
+        margin: 0 auto 10px;
+    }
+
+    &__item {
+        position: relative;
+        top: 0;
+        left: 0;
+        cursor: pointer;
+        border: 1px solid $primary-background;
+        padding: 20px;
+        transition: all .1s linear;
+
+        &:hover {
+            border:  1px solid $primary-color;
+
+            p {
+                display: block; /* Вернуть обычный блочный тип */
+                -webkit-box-orient: initial;
+                -webkit-line-clamp: unset; /* Убирает ограничение строк */
+                overflow: visible; /* Убирает скрытие текста */
+                text-overflow: clip; /* Убирает многоточие */
+                max-height: none; /* Убирает ограничение по высоте */
+                width: calc(100% + 2px);
+                padding: 0 20px 20px 20px;
+                border-left: 1px solid $primary-color;
+                border-right: 1px solid $primary-color;
+                border-bottom: 1px solid $primary-color;
+                position: absolute;
+                left: -1px;
+                z-index: 10;
+            }
+        }
+
+        p {
+            background: $primary-background;
+            display: -webkit-box;          /* Включаем флекс-контейнер в режиме блочного формата */
+            -webkit-box-orient: vertical; /* Устанавливаем вертикальную ориентацию для боксов */
+            overflow: hidden;             /* Скрываем переполнение текста */
+            text-overflow: ellipsis;      /* Добавляем многоточие, если текст обрезан */
+            -webkit-line-clamp: 7;        /* Ограничиваем текст до 7 строк */
+            line-height: 1.5;             /* Устанавливаем межстрочный интервал */
+            max-height: calc(1.5em * 7);  /* Выставляем максимальную высоту под 7 строки */
+        }
     }
 } 
 
@@ -296,6 +345,12 @@
     .project {
         width: calc(50% - 10px);
     }
+
+    .skills {
+        &__items {
+            grid-template-columns: repeat(2, 1fr);
+        }
+    }
 }
 
 @media (max-width: 1024px) {
@@ -304,16 +359,23 @@
             display: none;
         }
     }
+}
 
+@media (max-width: 900px) {
     .skills {
-        &__wrapper {
-            flex-direction: column-reverse;
-            gap: 40px;
+        &__container {
+            display: block;
+        }
+
+        &__image {
+            width: 100%;
+            max-width: 400px;
+            margin: 0 auto;
         }
 
         &__items {
-            width: 70%;
-            height: 70vw;
+            width: 100%;
+            grid-template-columns: repeat(3, 1fr);
 
             .icon {
                 width: calc(60vw / 7);
@@ -323,6 +385,14 @@
 
         &__text {
             width: 100%;
+        }
+    }
+}
+
+@media (max-width: 768px) {
+    .skills {
+        &__items {
+            grid-template-columns: repeat(2, 1fr);
         }
     }
 }
@@ -359,8 +429,7 @@
 
     .skills {
         &__items {
-            width: 70%;
-            height: 70vw;
+            grid-template-columns: repeat(2, 1fr);
 
             .icon {
                 width: calc(70vw / 7);
@@ -369,13 +438,6 @@
         }
     }
 }
-
-// @media (max-width: 700px) and (min-height: 500px) {
-//     .hero {
-//         // height: 300px;
-//         height: calc(auto + 40px);
-//     }
-// }
 
 @media (max-width: 700px) {
     .hero {
@@ -428,16 +490,12 @@
     .project {
         width: 85%;
     }
+}
 
+@media (max-width: 500px) {
     .skills {
         &__items {
-            width: 90%;
-            height: 90vw;
-
-            .icon {
-                width: calc(90vw / 7);
-                height: calc(90vw / 7);
-            }
+            display: block;
         }
     }
 }
