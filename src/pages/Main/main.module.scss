@@ -487,6 +487,10 @@
         }
     }
 
+    .projects {
+        padding-top: 80%;
+    }
+
     .project {
         width: 85%;
     }
@@ -547,8 +551,6 @@
 
 @media (max-width: 425px) {
     .projects {
-        padding: $padding-section-mobile;
-
         h3 {
             margin-bottom: 30px;
         }
