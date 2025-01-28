@@ -497,6 +497,26 @@
         &__items {
             display: block;
         }
+
+        &__item, &__item:hover {
+            border:  1px solid $primary-background;
+    
+            &:hover p , p {
+                display: block; /* Вернуть обычный блочный тип */
+                -webkit-box-orient: initial;
+                -webkit-line-clamp: unset; /* Убирает ограничение строк */
+                overflow: visible; /* Убирает скрытие текста */
+                text-overflow: clip; /* Убирает многоточие */
+                max-height: none; /* Убирает ограничение по высоте */
+                width: calc(100% + 2px);
+                padding: 0 20px 20px 20px;
+                border-left: 1px solid $primary-background;
+                border-right: 1px solid $primary-background;
+                border-bottom: 1px solid $primary-background;
+                position: static;
+                padding: 0;
+            }
+        }
     }
 }
 
