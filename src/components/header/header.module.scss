@@ -206,3 +206,12 @@
         display: block;
     }
 }
+
+@media (max-width: 768px) and (max-height: 450px) {
+    .navmenu {
+        &__items {
+            padding-top: 20px;
+            gap: 30px;
+        }
+    }
+}
