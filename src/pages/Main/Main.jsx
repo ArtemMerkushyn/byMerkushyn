@@ -11,6 +11,7 @@ import { Title } from '../../components/title/Title.jsx';
 import styles from './main.module.scss';
 import { ArrowLink } from '../../components/arrowLink/ArrowLink.jsx';
 import projects from '../../db/projects.json';
+import { Posts } from '../../components/posts/Posts.jsx';
 
 export const Main = () => {
     return (
@@ -122,6 +123,13 @@ export const Main = () => {
                             </li>
                         </ul>
                     </div>
+                </section>
+            </div>
+
+            <div className={styles.container}>
+                <section className={styles.posts}>
+                    <Title text={'Blog'} align={'center'}/>
+                    <Posts/>
                 </section>
             </div>
         </>
