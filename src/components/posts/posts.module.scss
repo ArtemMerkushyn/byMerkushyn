@@ -1,0 +1,30 @@
+@import '../../styles/variables';
+
+.posts {
+    &__topics {
+        padding: 17px 50px;
+        border: 1px solid $primary-color;
+        display: flex;
+        gap: 50px;
+        margin-bottom: 100px;
+    }
+
+    &__topic {
+        font-size: $font-size-lg-xxl;
+        color: $primary-color;
+        background: transparent;
+        border: none;
+        position: relative;
+        cursor: pointer;
+
+        &:not(:last-child)::before {
+            content: '';
+            position: absolute;
+            right: -25px;
+            width: 1px;
+            height: 100%;
+            background: $primary-color;
+        }
+    }
+    
+}
