@@ -1,26 +1,27 @@
 @import '../../styles/variables';
 
 .container {
-    max-width: $max-width-container;
     width: 100%;
-    margin: 0 auto;
-    padding: $padding-container;
     position: fixed;
     top: 0;
-    left: 0;
+    left: 50%;
+    transform: translateX(-50%);
     background: $primary-background;
     z-index: 10;
 }
 
 .header {
+    max-width: $max-width-container;
+    width: 100%;
     font-size: $font-size-lg;
     line-height: calc($font-size-lg + 8px);
     display: flex;
     justify-content: space-between;
-    padding: 10px 0;
+    padding: 10px 5px;
     background: inherit;
-    position: relative;
-    z-index: 8;
+    margin: 0 auto;
+    // position: relative;
+    // z-index: 8;
 }
 
 .logo {
