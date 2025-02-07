@@ -2,11 +2,12 @@
 
 .posts {
     &__topics {
-        padding: 17px 50px;
+        padding: 15px 30px;
+        border-radius: 10px;
         border: 1px solid $primary-color;
         display: flex;
         gap: 50px;
-        margin-bottom: 100px;
+        margin-bottom: 50px;
     }
 
     &__topic {
@@ -27,4 +28,46 @@
         }
     }
     
+    &__items {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        gap: 20px;
+    }
+}
+
+.post {
+    border-radius: 10px;
+    border: 1px solid $primary-color;
+    cursor: pointer;
+
+    &:hover &__body {
+        color: $primary-background;
+        background: $primary-color;
+    }
+
+    &__body {
+        padding-bottom: 15px;
+        transition: all .3s linear;
+    }
+
+    &__header {
+        padding: 15px 30px;
+        border-bottom: 1px solid $primary-color;
+    }
+
+    &__title {
+        padding: 15px 30px 5px;
+        font-size: $font-size-xl;
+    }
+
+    &__text {
+        padding: 0px 30px;
+        display: -webkit-box;          /* Включаем флекс-контейнер в режиме блочного формата */
+        -webkit-box-orient: vertical; /* Устанавливаем вертикальную ориентацию для боксов */
+        overflow: hidden;             /* Скрываем переполнение текста */
+        text-overflow: ellipsis;      /* Добавляем многоточие, если текст обрезан */
+        -webkit-line-clamp: 7;        /* Ограничиваем текст до 7 строк */
+        line-height: 1.5;             /* Устанавливаем межстрочный интервал */
+        max-height: calc(1.5em * 7);
+    }
 }
