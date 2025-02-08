@@ -51,28 +51,40 @@
 }
 
 .post {
+    height: 284px;
     border-radius: 10px;
     border: 1px solid $primary-color;
+    padding-bottom: 30px;
     cursor: pointer;
+    overflow: hidden;
+    position: relative;
+    transition: all .3s linear;
 
-    &:hover &__body {
+    &:hover {
         color: $primary-background;
         background: $primary-color;
     }
 
     &__body {
-        padding-bottom: 15px;
         transition: all .3s linear;
     }
 
     &__header {
         padding: 15px 30px;
         border-bottom: 1px solid $primary-color;
+        background: $primary-background;
+        color: $primary-color;
     }
 
     &__title {
-        padding: 15px 30px 5px;
+        padding:0px 30px;
         font-size: $font-size-xl;
+        display: -webkit-box;          /* Включаем флекс-контейнер в режиме блочного формата */
+        -webkit-box-orient: vertical; /* Устанавливаем вертикальную ориентацию для боксов */
+        overflow: hidden;             /* Скрываем переполнение текста */
+        text-overflow: ellipsis;      /* Добавляем многоточие, если текст обрезан */
+        -webkit-line-clamp: 1;        /* Ограничиваем текст до 1 строк */
+        margin-top: 15px;
     }
 
     &__text {
@@ -87,6 +99,8 @@
     }
 
     &__date {
-        
+        position: absolute;
+        right: 30px;
+        bottom: 10px;
     }
 }
