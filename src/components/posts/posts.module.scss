@@ -2,7 +2,7 @@
 
 .posts {
     &__topics {
-        padding: 15px 30px;
+        padding: 10px 30px;
         border-radius: 10px;
         border: 1px solid $primary-color;
         display: flex;
@@ -12,20 +12,35 @@
 
     &__topic {
         font-size: $font-size-lg;
+        line-height: $font-size-lg;
         color: $primary-color;
+        padding: 5px 15px;
         background: transparent;
         border: none;
+        border-radius: 10px;
         position: relative;
         cursor: pointer;
+        transition: all .3s linear;
 
         &:not(:last-child)::before {
             content: '';
             position: absolute;
             right: -25px;
+            top: 0;
             width: 1px;
             height: 100%;
             background: $primary-color;
         }
+
+        &:hover {
+            color: $primary-background;
+            background: $primary-color;
+        }
+    }
+
+    .posts__topic.active {
+        background: $primary-color;
+        color: $primary-background;
     }
     
     &__items {

@@ -1,13 +1,20 @@
+import { useState } from 'react';
 import styles from './posts.module.scss';
 
 export const Posts = () => {
+    const [activeTopic, setActiveTopic] = useState('All');
+
+    const topics = ['All', 'Programming', 'Sport', 'Other']
     return (
         <div className={styles.posts}>
             <div className={styles.posts__topics}>
-                <button className={styles.posts__topic}>All</button>
-                <button className={styles.posts__topic}>Programming</button>
-                <button className={styles.posts__topic}>Sport</button>
-                <button className={styles.posts__topic}>Other</button>
+                {topics.map((topic) => (
+                    <button 
+                        key={topic}
+                        className={`${styles.posts__topic} ${activeTopic === topic ? styles.active : ''}`}
+                        onClick={() => setActiveTopic(topic)}
+                    >{topic}</button>
+                ))}
             </div>
             <div className={styles.posts__items}>
                 <div className={styles.post}>
