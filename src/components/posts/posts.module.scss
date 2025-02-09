@@ -6,6 +6,7 @@
         border-radius: 10px;
         border: 1px solid $primary-color;
         display: flex;
+        flex-wrap: wrap;
         gap: 50px;
         margin-bottom: $margin-title;
     }
@@ -102,5 +103,59 @@
         position: absolute;
         right: 30px;
         bottom: 10px;
+    }
+}
+
+@media (max-width: 769px) {
+    .posts {
+        &__topics {
+            padding: 5px 10px;
+            gap: 10px;
+            margin-bottom: 20px;
+        }
+
+        &__topic{
+            &:not(:last-child)::before  {
+                display: none;
+            }
+        }
+        &__items {
+            grid-template-columns: repeat(2, 1fr);
+        }
+    }
+
+    .post {
+        height: 210px;
+        &__header, &__title, &__text {
+            padding: 5px 10px;
+        }
+
+        &__title {
+            font-size: $font-size-lg-xl;
+            max-height: calc(1.5em * 1);
+            margin-top: 0;
+        }
+
+        &__text {
+            -webkit-line-clamp: 5;
+            max-height: calc(1.5em * 5);
+        }
+    }
+}
+
+@media (max-width: 600px) {
+    .posts {
+        &__topics {
+            gap: 5px;
+        }
+
+        &__topic {
+            font-size: $font-size-md;
+            padding: 2px 5px;
+        }
+
+        &__items {
+            grid-template-columns: repeat(1, 1fr);
+        }
     }
 }

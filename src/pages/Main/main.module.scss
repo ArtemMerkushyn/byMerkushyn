@@ -481,6 +481,19 @@
     }
 }
 
+@media (max-width: 600px) {
+    .projects, .skills, .posts {
+        h3{
+            margin-bottom: $margin-title-mobile;
+        }
+    }
+    .posts {
+        &__link {
+            margin-top: $margin-title-mobile;
+        }
+    }
+}
+
 @media (max-width: 500px) {
     .skills {
         &__items {
