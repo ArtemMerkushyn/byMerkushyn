@@ -315,8 +315,14 @@
 
 .posts {
     padding: $padding-section;
+
     h3 {
         margin-bottom: $margin-title;
+    }
+
+    &__link {
+        margin-top: $margin-title;
+        text-align: center;
     }
 }
 

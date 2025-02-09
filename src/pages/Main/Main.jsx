@@ -12,6 +12,7 @@ import styles from './main.module.scss';
 import { ArrowLink } from '../../components/arrowLink/ArrowLink.jsx';
 import projects from '../../db/projects.json';
 import { Posts } from '../../components/posts/Posts.jsx';
+import { Btn3 } from '../../components/btns/btn3/Btn3.jsx';
 
 export const Main = () => {
     return (
@@ -130,6 +131,9 @@ export const Main = () => {
                 <section className={styles.posts}>
                     <Title text={'Blog'} align={'center'}/>
                     <Posts/>
+                    <div className={styles.posts__link}>
+                        <Btn3 text={'More posts'} url={'/posts'}/>
+                    </div>
                 </section>
             </div>
         </>
