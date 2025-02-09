@@ -40,7 +40,7 @@ export const Header = () => {
                         <li className={styles.nav__item}>
                             <NavLink
                                 className={({ isActive }) => (isActive ? styles.active : undefined)} 
-                                to={'/xf'}
+                                to={'/posts'}
                             >Blog</NavLink>
                         </li>
                     </ul>

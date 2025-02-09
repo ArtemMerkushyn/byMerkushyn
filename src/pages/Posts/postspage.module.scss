@@ -1,0 +1,16 @@
+@import '../../styles//variables';
+
+.container {
+    max-width: $max-width-container;
+    width: 100%;
+    margin: 0 auto;
+    padding: $padding-container;
+}
+
+.posts {
+    padding: $padding-section;
+
+    h3 {
+        margin-bottom: $margin-title;
+    }
+}
