@@ -1,0 +1,12 @@
+@import '../../styles/variables';
+
+.container {
+    max-width: $max-width-container;
+    width: 100%;
+    margin: 0 auto;
+    padding: $padding-container;
+}
+
+.projects {
+    padding-top: 50px;
+}

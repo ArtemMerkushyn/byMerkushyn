@@ -55,6 +55,9 @@ export const Main = () => {
                                 </div> 
                             ))}
                         </div>
+                        <div className={styles.projects__link}>
+                            <Btn3 text={'More pojects'} url={'projects'}/>
+                        </div>
                 </section>
             </div>
 

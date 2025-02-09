@@ -26,7 +26,7 @@ export const Header = () => {
                         <li className={styles.nav__item}>
                             <NavLink 
                                 className={({ isActive }) => (isActive ? styles.active : undefined)}
-                                to={'/x'}
+                                to={'/projects'}
                             >
                                 Projects
                             </NavLink>
