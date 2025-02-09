@@ -1,11 +1,15 @@
 import { useState } from 'react';
 import styles from './posts.module.scss';
 import { useEffect } from 'react';
+import { useLocation } from 'react-router-dom';
 
 export const Posts = () => {
     const [activeTopic, setActiveTopic] = useState('All');
     const [posts, setPosts] = useState([]);
     const [topics, setTopics] = useState(['All']);
+
+    const location = useLocation();
+    const isHomePage = location.pathname === '/';
 
     useEffect(() => {
         fetch('/db/posts.json') // Загружаем JSON из public
@@ -23,6 +27,8 @@ export const Posts = () => {
     // Фильтрация постов по выбранной теме
     const filteredPosts = activeTopic === 'All' ? posts : posts.filter(post => post.topic === activeTopic);
 
+    const displayedPosts = isHomePage ? filteredPosts.slice(-6) : filteredPosts;
+
     return (
         <div className={styles.posts}>
             <div className={styles.posts__topics}>
@@ -35,8 +41,8 @@ export const Posts = () => {
                 ))}
             </div>
             <div className={styles.posts__items}>
-                {filteredPosts.length > 0 ? (
-                    filteredPosts.map((post) => (
+                {displayedPosts.length > 0 ? (
+                    displayedPosts.map((post) => (
                         <div key={post._id} className={styles.post}>
                             <div className={styles.post__header}>{post.topic}</div>
                             <div className={styles.post__body}>
