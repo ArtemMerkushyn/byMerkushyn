@@ -60,6 +60,7 @@ export const Header = () => {
                         <NavLink 
                             className={({ isActive }) => (isActive ? styles.active : undefined)} 
                             to={'/'}
+                            onClick={() => setActiveBurgerBtn(false)}
                         >
                             Home
                         </NavLink>
@@ -67,7 +68,8 @@ export const Header = () => {
                     <li className={styles.navmenu__item}>
                         <NavLink 
                             className={({ isActive }) => (isActive ? styles.active : undefined)}
-                            to={'/x'}
+                            to={'/projects'}
+                            onClick={() => setActiveBurgerBtn(false)}
                         >
                             Projects
                         </NavLink>
@@ -75,14 +77,20 @@ export const Header = () => {
                     <li className={styles.navmenu__item}>
                         <NavLink
                             className={({ isActive }) => (isActive ? styles.active : undefined)} 
-                            to={'/xd'}
-                        >Tech</NavLink>
+                            to={'/'}
+                            onClick={() => setActiveBurgerBtn(false)}
+                        >
+                            Tech
+                        </NavLink>
                     </li>
                     <li className={styles.navmenu__item}>
                         <NavLink
                             className={({ isActive }) => (isActive ? styles.active : undefined)} 
-                            to={'/xf'}
-                        >Blog</NavLink>
+                            to={'/posts'}
+                            onClick={() => setActiveBurgerBtn(false)}
+                        >
+                            Blog
+                        </NavLink>
                     </li>
                 </ul>
             </nav>
