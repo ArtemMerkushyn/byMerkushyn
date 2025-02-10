@@ -34,7 +34,7 @@ export const Header = () => {
                         <li className={styles.nav__item}>
                             <NavLink
                                 className={({ isActive }) => (isActive ? styles.active : undefined)} 
-                                to={'/xd'}
+                                to={'/'}
                             >Tech</NavLink>
                         </li>
                         <li className={styles.nav__item}>
