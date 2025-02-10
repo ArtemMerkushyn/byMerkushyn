@@ -1,5 +1,4 @@
 import { Btn1 } from '../../components/btns/btn1/Btn1.jsx';
-import { Btn2 } from '../../components/btns/btn2/Btn2.jsx';
 import { Contacts } from '../../components/contacts/Contacts.jsx';
 import Icons from '../../components/Icons/Icons.jsx';
 import { FiLayout } from "react-icons/fi";
@@ -9,10 +8,9 @@ import { FaPeopleCarryBox } from "react-icons/fa6";
 
 import { Title } from '../../components/title/Title.jsx';
 import styles from './main.module.scss';
-import { ArrowLink } from '../../components/arrowLink/ArrowLink.jsx';
-import projects from '../../db/projects.json';
 import { Posts } from '../../components/posts/Posts.jsx';
 import { Btn3 } from '../../components/btns/btn3/Btn3.jsx';
+import { Projects } from '../../components/projects/Projects.jsx';
 
 export const Main = () => {
     return (
@@ -39,7 +37,7 @@ export const Main = () => {
             <div className={styles.container}>
                 <section className={styles.projects}>
                         <Title text={'Projects'} align={'center'}/>
-                        <div className={styles.projects__items}>
+                        {/* <div className={styles.projects__items}>
                             {projects.map((project) => (
                             <div key={project.id} className={styles.project}>
                                     <div className={styles.project__item}>
@@ -54,7 +52,8 @@ export const Main = () => {
                                     </div>
                                 </div> 
                             ))}
-                        </div>
+                        </div> */}
+                        <Projects/>
                         <div className={styles.projects__link}>
                             <Btn3 text={'More pojects'} url={'projects'}/>
                         </div>
