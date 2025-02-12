@@ -71,15 +71,16 @@
     }
 
     &__header {
-        padding: 15px 30px;
+        padding: 15px 20px;
         border-bottom: 1px solid $primary-color;
         background: $primary-background;
         color: $primary-color;
     }
 
     &__title {
-        padding:0px 30px;
-        font-size: $font-size-xl;
+        padding:0px 20px 5px;
+        font-size: $font-size-lg;
+        line-height: calc($font-size-lg-md + 8px);
         display: -webkit-box;          /* Включаем флекс-контейнер в режиме блочного формата */
         -webkit-box-orient: vertical; /* Устанавливаем вертикальную ориентацию для боксов */
         overflow: hidden;             /* Скрываем переполнение текста */
@@ -89,7 +90,7 @@
     }
 
     &__text {
-        padding: 0px 30px;
+        padding: 0px 20px;
         display: -webkit-box;          /* Включаем флекс-контейнер в режиме блочного формата */
         -webkit-box-orient: vertical; /* Устанавливаем вертикальную ориентацию для боксов */
         overflow: hidden;             /* Скрываем переполнение текста */
@@ -133,7 +134,7 @@
         &__title {
             font-size: $font-size-lg-xl;
             max-height: calc(1.5em * 1);
-            margin-top: 0;
+            margin-top: 5px;
         }
 
         &__text {
