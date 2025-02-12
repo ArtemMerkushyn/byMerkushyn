@@ -34,14 +34,18 @@ export const Header = () => {
                         <li className={styles.nav__item}>
                             <NavLink
                                 className={({ isActive }) => (isActive ? styles.active : undefined)} 
-                                to={'/'}
-                            >Tech</NavLink>
+                                to={'/posts'}
+                            >
+                                Blog
+                            </NavLink>
                         </li>
                         <li className={styles.nav__item}>
                             <NavLink
                                 className={({ isActive }) => (isActive ? styles.active : undefined)} 
-                                to={'/posts'}
-                            >Blog</NavLink>
+                                to={'/contacts'}
+                            >
+                                Contacts
+                            </NavLink>
                         </li>
                     </ul>
                 </nav>
@@ -77,19 +81,19 @@ export const Header = () => {
                     <li className={styles.navmenu__item}>
                         <NavLink
                             className={({ isActive }) => (isActive ? styles.active : undefined)} 
-                            to={'/'}
+                            to={'/posts'}
                             onClick={() => setActiveBurgerBtn(false)}
                         >
-                            Tech
+                            Blog
                         </NavLink>
                     </li>
                     <li className={styles.navmenu__item}>
                         <NavLink
                             className={({ isActive }) => (isActive ? styles.active : undefined)} 
-                            to={'/posts'}
+                            to={'/contacts'}
                             onClick={() => setActiveBurgerBtn(false)}
                         >
-                            Blog
+                            Contacts
                         </NavLink>
                     </li>
                 </ul>
