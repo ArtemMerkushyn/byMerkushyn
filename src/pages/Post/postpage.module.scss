@@ -9,4 +9,50 @@
 
 .post {
     padding: $padding-section;
+    display: flex;
+    gap: 50px;
+
+    &__body {
+        width: 70%;
+        height: auto;
+        min-height: calc(100vh - 300px);
+        padding: 50px;
+        border: 1px solid $primary-color;
+        border-radius: 10px;
+    }
+    
+    &__date {
+        display: flex;
+        align-items: center;
+        gap: 5px;
+        font-size: $font-size-md;
+        line-height: $font-size-md;
+        margin-bottom: 5px;
+    }
+
+    &__title {
+        font-size: $font-size-xxl-md;
+        line-height: calc($font-size-xxl-md + 6px);
+        margin-bottom: 5px;
+    }
+
+    &__topic {
+        display: inline-block;
+        background: $primary-color;
+        border-radius: 10px;
+        padding: 5px 10px;
+        font-size: $font-size-md;
+        line-height: $font-size-md;
+        color: $primary-background;
+        margin-bottom: 20px;
+    }
+
+    &__recommendations {
+        height: auto;
+        min-height: calc(100vh - 300px);
+        width: 30%;
+        padding: 100px;
+        border: 1px solid $primary-color;
+        border-radius: 10px;
+    }
 }
