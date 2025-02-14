@@ -1,31 +1,30 @@
-import { useLocation, useParams } from 'react-router-dom';
-import styles from './postpage.module.scss';
+import { useParams } from 'react-router-dom';
 import { useEffect, useState } from 'react';
 import { MdDateRange } from "react-icons/md";
+import styles from './postpage.module.scss';
 
 export const PostPage = () => {
-    const location = useLocation();
     const { _id } = useParams();
-    const [ post, setPost ] = useState(location.state?.post || null);
+    const [ post, setPost ] = useState(null);
+    const [recommendations, setRecommendations] = useState([]);
 
     useEffect(() => {
-        if(!post) {
             fetch(`/db/posts.json`)
                 .then(res => res.json())
                 .then(data => {
                     const foundPost = data.find(post => post._id === _id);
                     setPost(foundPost);
+
+                    if (foundPost) {
+                        // Фильтруем посты с таким же topic (исключая текущий)
+                        const filteredPosts = data.filter(p => p.topic === foundPost.topic && p._id !== _id);
+                        // Перемешиваем массив и берём 2 случайных поста
+                        const shuffled = filteredPosts.sort(() => Math.random() - 0.5);
+                        setRecommendations(shuffled.slice(0, 2));
+                    }
                 })
                 .catch(err => console.log('Error loading post: ', err));
-        }
-    }, [_id, post]);
-
-    useEffect(() => {
-        if (post) {
-            console.log(post.text); // Проверяем исходный текст
-            console.log(post.text.split('\n\n')); // Смотрим, правильно ли разбивается
-        }
-    }, [post]);
+    }, [_id]);
 
     if (!post) {
         return <p>No post</p>;
@@ -47,7 +46,15 @@ export const PostPage = () => {
                     </div>
                 </div>
                 <div className={styles.post__recommendations}>
-                    
+                    {recommendations.length > 0 ? (
+                        recommendations.map((post, index) => (
+                            <div key={index}>
+                                {post.title}
+                            </div>
+                        ))
+                    ) : ( 
+                        <div>No recommendations</div>
+                    )}
                 </div>
             </section>
         </div>
