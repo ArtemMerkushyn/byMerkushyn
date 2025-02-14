@@ -1,4 +1,4 @@
-import { useParams } from 'react-router-dom';
+import { Link, useParams } from 'react-router-dom';
 import { useEffect, useState } from 'react';
 import { MdDateRange } from "react-icons/md";
 import styles from './postpage.module.scss';
@@ -46,11 +46,17 @@ export const PostPage = () => {
                     </div>
                 </div>
                 <div className={styles.post__recommendations}>
+                    <h3 className={styles.recommendations__title}>More posts on <span className={styles.post__topic}>{post.topic}</span></h3>
                     {recommendations.length > 0 ? (
                         recommendations.map((post, index) => (
-                            <div key={index}>
-                                {post.title}
-                            </div>
+                            <Link to={`/posts/${post._id}`} key={index} className={styles.recommended} state={{post}}>
+                                <div className={styles.recommended__header}>{post.topic}</div>
+                                <div className={styles.recommended__body}>
+                                    <h4 className={styles.recommended__title}>{post.title}</h4>
+                                    <p className={styles.recommended__text}>{post.text}</p>
+                                </div>
+                                <div className={styles.recommended__date}>{post.date}</div>
+                            </Link>
                         ))
                     ) : ( 
                         <div>No recommendations</div>

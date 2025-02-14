@@ -51,8 +51,76 @@
         height: auto;
         min-height: calc(100vh - 300px);
         width: 30%;
-        padding: 100px;
-        border: 1px solid $primary-color;
         border-radius: 10px;
+        display: flex;
+        flex-direction: column;
+        gap: 20px;
+    }
+}
+
+.recommendations__title {
+    font-size: $font-size-lg-xl;
+    line-height: $font-size-lg-xl;
+
+    span {
+        padding: 2px 8px;
+        font-weight: normal;
+        margin-bottom: 0;
+    }
+}
+
+.recommended {
+    height: 284px;
+    border-radius: 10px;
+    border: 1px solid $primary-color;
+    padding-bottom: 30px;
+    cursor: pointer;
+    overflow: hidden;
+    position: relative;
+    transition: all .3s linear;
+
+    &:hover {
+        color: $primary-background;
+        background: $primary-color;
+    }
+
+    &__body {
+        transition: all .3s linear;
+    }
+
+    &__header {
+        padding: 15px 20px;
+        border-bottom: 1px solid $primary-color;
+        background: $primary-background;
+        color: $primary-color;
+    }
+
+    &__title {
+        padding:0px 20px 5px;
+        font-size: $font-size-lg;
+        line-height: calc($font-size-lg-md + 8px);
+        display: -webkit-box;          /* Включаем флекс-контейнер в режиме блочного формата */
+        -webkit-box-orient: vertical; /* Устанавливаем вертикальную ориентацию для боксов */
+        overflow: hidden;             /* Скрываем переполнение текста */
+        text-overflow: ellipsis;      /* Добавляем многоточие, если текст обрезан */
+        -webkit-line-clamp: 1;        /* Ограничиваем текст до 1 строк */
+        margin-top: 15px;
+    }
+
+    &__text {
+        padding: 0px 20px;
+        display: -webkit-box;          /* Включаем флекс-контейнер в режиме блочного формата */
+        -webkit-box-orient: vertical; /* Устанавливаем вертикальную ориентацию для боксов */
+        overflow: hidden;             /* Скрываем переполнение текста */
+        text-overflow: ellipsis;      /* Добавляем многоточие, если текст обрезан */
+        -webkit-line-clamp: 7;        /* Ограничиваем текст до 7 строк */
+        line-height: 1.5;             /* Устанавливаем межстрочный интервал */
+        max-height: calc(1.5em * 7);
+    }
+
+    &__date {
+        position: absolute;
+        right: 30px;
+        bottom: 10px;
     }
 }
