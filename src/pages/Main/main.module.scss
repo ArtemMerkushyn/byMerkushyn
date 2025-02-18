@@ -176,65 +176,50 @@
     &__image {
         width: 36%;
         
-        & img {
+        img {
             width: 100%;
+            height: auto;
+            max-width: 500px;
+            max-height: 500px;
             height: auto;
         }
     }
+
+    &__quote {
+        font-size: $font-size-lg-md;
+        line-height: calc($font-size-lg-md + 4px);
+        text-align: center;
+        margin-bottom: 20px;
+    }
+
+
 
     &__items {
         width: 64%;
         display: grid;
         grid-template-columns: repeat(3, 1fr);
-    }
-
-    &__img svg {
-        width: 100px;
-        height: auto;
-        display: block;
-        margin: 0 auto 10px;
+        gap: 50px;
     }
 
     &__item {
-        position: relative;
-        top: 0;
-        left: 0;
-        cursor: pointer;
-        border: 1px solid $primary-background;
-        padding: 20px;
-        transition: all .1s linear;
-
-        &:hover {
-            border:  1px solid $primary-color;
-
-            p {
-                display: block; /* Вернуть обычный блочный тип */
-                -webkit-box-orient: initial;
-                -webkit-line-clamp: unset; /* Убирает ограничение строк */
-                overflow: visible; /* Убирает скрытие текста */
-                text-overflow: clip; /* Убирает многоточие */
-                max-height: none; /* Убирает ограничение по высоте */
-                width: calc(100% + 2px);
-                padding: 0 20px 20px 20px;
-                border-left: 1px solid $primary-color;
-                border-right: 1px solid $primary-color;
-                border-bottom: 1px solid $primary-color;
-                position: absolute;
-                left: -1px;
-                z-index: 10;
-            }
+        svg {
+            width: 100px;
+            height: 100px;
+            display: block;
+            margin: 0 auto 10px;
         }
+    }
 
-        p {
-            background: $primary-background;
-            display: -webkit-box;          /* Включаем флекс-контейнер в режиме блочного формата */
-            -webkit-box-orient: vertical; /* Устанавливаем вертикальную ориентацию для боксов */
-            overflow: hidden;             /* Скрываем переполнение текста */
-            text-overflow: ellipsis;      /* Добавляем многоточие, если текст обрезан */
-            -webkit-line-clamp: 7;        /* Ограничиваем текст до 7 строк */
-            line-height: 1.5;             /* Устанавливаем межстрочный интервал */
-            max-height: calc(1.5em * 7);  /* Выставляем максимальную высоту под 7 строки */
-        }
+    &__title {
+        font-size: $font-size-lg-xl;
+        line-height: $font-size-lg-xl;
+        text-align: center;
+        margin-bottom: 5px;
+    }
+
+
+    &__text {
+        text-align: center;
     }
 } 
 
@@ -291,67 +276,10 @@
     }
 }
 
-@media (max-width: 1200px) {
-    .skills {
-        &__items {
-            grid-template-columns: repeat(2, 1fr);
-        }
-    }
-}
-
 @media (max-width: 1024px) {
     .hero {
         &__mause {
             display: none;
-        }
-    }
-}
-
-@media (max-width: 900px) {
-    .skills {
-        &__container {
-            display: block;
-        }
-
-        &__image {
-            width: 100%;
-            max-width: 400px;
-            margin: 0 auto;
-        }
-
-        &__items {
-            width: 100%;
-            grid-template-columns: repeat(3, 1fr);
-
-            .icon {
-                width: calc(60vw / 7);
-                height: calc(60vw / 7);
-            }
-        }
-
-        &__text {
-            width: 100%;
-        }
-    }
-}
-
-@media (max-width: 769px) {
-    .skills {
-        &__items {
-            grid-template-columns: repeat(2, 1fr);
-        }
-    }
-}
-
-@media (max-width: 724px) {
-    .skills {
-        &__items {
-            grid-template-columns: repeat(2, 1fr);
-
-            .icon {
-                width: calc(70vw / 7);
-                height: calc(70vw / 7);
-            }
         }
     }
 }
@@ -425,34 +353,6 @@
     .posts {
         &__link {
             margin-top: $margin-title-mobile;
-        }
-    }
-}
-
-@media (max-width: 500px) {
-    .skills {
-        &__items {
-            display: block;
-        }
-
-        &__item, &__item:hover {
-            border:  1px solid $primary-background;
-    
-            &:hover p , p {
-                display: block; /* Вернуть обычный блочный тип */
-                -webkit-box-orient: initial;
-                -webkit-line-clamp: unset; /* Убирает ограничение строк */
-                overflow: visible; /* Убирает скрытие текста */
-                text-overflow: clip; /* Убирает многоточие */
-                max-height: none; /* Убирает ограничение по высоте */
-                width: calc(100% + 2px);
-                padding: 0 20px 20px 20px;
-                border-left: 1px solid $primary-background;
-                border-right: 1px solid $primary-background;
-                border-bottom: 1px solid $primary-background;
-                position: static;
-                padding: 0;
-            }
         }
     }
 }
