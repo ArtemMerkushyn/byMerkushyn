@@ -171,10 +171,11 @@
 
     &__container {
         display: flex;
+        gap: 40px;
     }
 
     &__image {
-        width: 36%;
+        width: 45%;
         
         img {
             width: 100%;
@@ -182,6 +183,8 @@
             max-width: 500px;
             max-height: 500px;
             height: auto;
+            display: block;
+            margin: 0 auto;
         }
     }
 
@@ -189,13 +192,13 @@
         font-size: $font-size-lg-md;
         line-height: calc($font-size-lg-md + 4px);
         text-align: center;
-        margin-bottom: 20px;
+        margin-bottom: 10px;
     }
 
 
 
     &__items {
-        width: 64%;
+        width: 55%;
         display: grid;
         grid-template-columns: repeat(3, 1fr);
         gap: 50px;
@@ -282,6 +285,43 @@
             display: none;
         }
     }
+
+    .skills {
+        &__container {
+            gap: 20px;
+        }
+        &__image {
+            width: 50%;
+        }
+
+        &__items {
+            width: 50%;
+            gap: 20px;
+        }
+    }
+}
+
+@media (max-width: 769px) {
+    .skills {
+        &__container {
+            display: block;
+        }
+
+        &__image {
+            width: 100%;
+            margin-bottom: 30px;
+        }
+
+        &__quote {
+            max-width: 600px;
+            font-size: $font-size-lg;
+            margin: 0 auto 10px;
+        }
+
+        &__items {
+            width: 100%;
+        }
+    }
 }
 
 @media (max-width: 700px) {
@@ -357,7 +397,7 @@
     }
 }
 
-@media (max-width: 425px) {
+@media (max-width: 426px) {
     .projects {
         h3 {
             margin-bottom: $margin-title-mobile;
@@ -365,6 +405,23 @@
 
         &__link {
             margin-top: $margin-title-mobile;
+        }
+    }
+
+    .skills {
+        &__items {
+            gap: 10px;
+        }
+
+        &__item {
+            svg {
+                width: 60px;
+                height: 60px;
+            }
+        }
+
+        &__title {
+            font-size: $font-size-sm;
         }
     }
 }
