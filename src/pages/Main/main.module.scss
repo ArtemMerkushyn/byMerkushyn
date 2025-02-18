@@ -398,6 +398,11 @@
 }
 
 @media (max-width: 426px) {
+    .hero {
+        h1 {
+            font-size: $font-size-xxl;
+        }
+    }
     .projects {
         h3 {
             margin-bottom: $margin-title-mobile;
