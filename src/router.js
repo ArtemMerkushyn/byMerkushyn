@@ -4,7 +4,7 @@ import { Main } from "./pages/Main/Main";
 import { ProjectsPage } from "./pages/Projects/ProjectsPage";
 import { PostsPage } from "./pages/Posts/PostsPage";
 import { PostPage } from "./pages/Post/PostPage";
-import Portfolio from "./pages/Portfolio/Portfolio";
+import AboutMe from "./pages/Portfolio/AboutMe";
 
 
 export const router = createBrowserRouter([
@@ -21,8 +21,8 @@ export const router = createBrowserRouter([
                 element: <ProjectsPage/>,
             },
             {
-                path: 'portfolio',
-                element: <Portfolio/>,
+                path: 'aboutme',
+                element: <AboutMe/>,
             },
             {
                 path: 'posts',

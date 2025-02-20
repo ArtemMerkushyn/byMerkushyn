@@ -121,7 +121,7 @@ export const Main = () => {
                         </ul>
                     </div>
                     <div className={styles.posts__link}>
-                        <Btn3 text={'More about me'} url={'/portfolio'}/>
+                        <Btn3 text={'More about me'} url={'/aboutme'}/>
                     </div>  
                 </section>
             </div>
