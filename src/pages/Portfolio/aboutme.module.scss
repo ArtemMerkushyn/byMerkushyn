@@ -9,4 +9,29 @@
 
 .aboutme {
     padding: $padding-section;
+
+    &__title {
+        font-size: 100px;
+        line-height: 100px;
+        text-transform: uppercase;
+        color: transparent;
+        -webkit-text-stroke: 2px $primary-color;
+        text-align: center;
+        margin-bottom: 20px;
+    }
+
+    button {
+        display: block;
+        margin: 20px auto;
+    }
+
+    &__call {
+        display: block;
+        text-align: center;
+        margin: 20px 0;
+    }
+
+    &__lacation {
+        text-align: center;
+    }
 }
