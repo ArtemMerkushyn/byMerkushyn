@@ -11,6 +11,7 @@ import { Posts } from '../../components/posts/Posts.jsx';
 import { Btn3 } from '../../components/btns/btn3/Btn3.jsx';
 import { Projects } from '../../components/projects/Projects.jsx';
 import styles from './main.module.scss';
+import { AboutMe } from '../../components/aboutme/AboutMe.jsx';
 
 export const Main = () => {
     return (
@@ -35,12 +36,19 @@ export const Main = () => {
             </section>
 
             <div className={styles.container}>
+                <section className={styles.aboutme}>
+                    <Title text={'About me'} align={'center'}/>
+                    <AboutMe/>
+                </section>
+            </div>
+
+            <div className={styles.container}>
                 <section className={styles.projects}>
-                        <Title text={'Projects'} align={'center'}/>
-                        <Projects/>
-                        <div className={styles.projects__link}>
+                    <Title text={'Projects'} align={'center'}/>
+                    <Projects/>
+                    <div className={styles.projects__link}>
                             <Btn3 text={'More pojects'} url={'projects'}/>
-                        </div>
+                    </div>
                 </section>
             </div>
 
