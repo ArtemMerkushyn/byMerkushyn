@@ -25,6 +25,8 @@
             font-size: $font-size-lg-xxl;
             font-weight: 700;
             color: $primary-color;
+            text-align: right;
+            max-width: 40vw;
         }
     }
 
@@ -44,11 +46,73 @@
             font-size: $font-size-lg-xxl;
             font-weight: 700;
             color: $primary-color;
+            text-align: left;
+            max-width: 40vw;
         }
     }
 
     button {
         display: block;
         margin: 40px auto 0;
+    }
+}
+
+@media (max-width: 1025px) {
+    .aboutme {
+        &__left, &__right {
+            &::before {
+                font-size: $font-size-lg;
+            }
+        }
+    }
+}
+
+@media (max-width: 500px) {
+    .aboutme {
+        &__description {
+            margin-bottom: 40px;
+        }
+
+        &__left, &__right {
+            width: 100%;
+            border-right: none;
+            border-left: none;
+            border: 1px solid $primary-color;
+            border-radius: 10px;
+            text-align: center;
+            padding: 40px 10px 10px 10px;
+            margin-bottom: 40px;
+
+            &::after {
+                content: '';
+                width: 2px;
+                height: 40px;
+                background: $primary-color;
+                position: absolute;
+                top: 0;
+                left: 50%;
+                transform: translate(-50%, -100%);
+            }
+        }
+
+        &__left:first-child::after {
+            background: transparent;
+        }
+
+        &__left::before{
+            max-width: 100%;
+            width: 100%;
+            top: 10px;
+            right: 100%;
+            text-align: center;
+        }
+
+        &__right::before {
+            max-width: 100%;
+            width: 100%;
+            top: 10px;
+            left: 100%;
+            text-align: center;
+        }
     }
 }
