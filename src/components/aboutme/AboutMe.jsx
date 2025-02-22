@@ -1,21 +1,37 @@
+import { useEffect, useState } from 'react';
 import styles from './aboutme.module.scss';
+import { Btn3 } from '../btns/btn3/Btn3';
 
 export const AboutMe = () => {
+    const [aboutMeItems, setAboutMeItems] = useState([]);
+
+    useEffect(() => {
+        fetch('/db/aboutme.json')
+            .then((res) => res.json())
+            .then((data) => {
+                setAboutMeItems(data)
+            })
+            .catch((err) => console.error('Error downloading aboutMeItems :', err))
+    }, []);
+
     return (
         <div className={styles.aboutme}>
             <p className={styles.aboutme__description}>
                 Я — Full Stack Developer, специализирующийся на стеке MERN (MongoDB, Express, React, Node.js). Занимаюсь созданием веб-приложений, начиная от проектирования базы данных и серверной логики до разработки удобного и современного интерфейса. Для меня важно писать чистый, понятный код и создавать быстрые, эффективные решения.
             </p>
             <div className={styles.aboutme__text}>
-                <p className={styles.aboutme__right}>
-                    На клиентской стороне я работаю с React, создавая переиспользуемые компоненты и управляя состоянием с помощью хуков и Redux. Уделяю внимание адаптивности интерфейсов, используя SCSS, Flexbox и Grid, чтобы приложения выглядели и работали хорошо на разных устройствах. Также занимаюсь обработкой пользовательского ввода, валидацией данных и улучшением UX.
-                </p>
-                <p className={styles.aboutme__left}>
-                    На сервере использую Node.js и Express, разрабатываю API и настраиваю маршрутизацию. Работаю с MongoDB, проектируя схемы данных и оптимизируя запросы. Умею обрабатывать клиентские запросы, взаимодействовать с базой и возвращать данные в нужном формате.
-                </p>
-                <p className={styles.aboutme__right}>
-                    Для меня программирование — это не просто написание кода, а возможность превращать идеи в работающие продукты, которые помогают людям. Мне нравится разбираться в задачах, находить лучшие решения и видеть результат своей работы. Я постоянно учусь и развиваюсь, потому что технологии не стоят на месте, и важно идти в ногу со временем.
-                </p>
+                {aboutMeItems.map((item, index) => (
+                    <p 
+                        key={index}
+                        className={index % 2 ? styles.aboutme__right : styles.aboutme__left}
+                        data-title = {item.title}
+                        >
+                        {item.text}
+                    </p>
+                ))}
+                <div className={styles.posts__link}>
+                    <Btn3 text={'More about me'} url={'/aboutme'}/>
+                </div>
             </div>
         </div>
     )

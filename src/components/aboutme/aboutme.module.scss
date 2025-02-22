@@ -9,18 +9,46 @@
 
     &__right {
         width: 50%;
-        // transform: translateX(calc(100% - 1.3px));
         border-left: 2px solid $primary-color;
         padding-left: 20px;
         padding: 20px 0 20px 20px;
         margin-left: auto;
         transform: translateX(-1.8px);
+        position: relative;
+
+        &::before {
+            content: attr(data-title);
+            position: absolute;
+            top: 20px;
+            left: -20px;
+            transform: translateX(-100%);
+            font-size: $font-size-lg-xxl;
+            font-weight: 700;
+            color: $primary-color;
+        }
     }
 
     &__left {
         width: 50%;
         text-align: right;
         border-right: 2px solid $primary-color;
-        padding-right: 20px;
+        padding: 20px 20px 20px 0px;
+        position: relative;
+
+        &::before {
+            content: attr(data-title);
+            position: absolute;
+            top: 20px;
+            right: -20px;
+            transform: translateX(100%);
+            font-size: $font-size-lg-xxl;
+            font-weight: 700;
+            color: $primary-color;
+        }
+    }
+
+    button {
+        display: block;
+        margin: 40px auto 0;
     }
 }
