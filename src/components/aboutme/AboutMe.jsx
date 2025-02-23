@@ -16,7 +16,7 @@ export const AboutMe = () => {
             .catch((err) => console.error('Error downloading aboutMeItems :', err))
     }, []);
 
-    const displayedAboutMeItems = isHomePage ? aboutMeItems.slice(-4) : aboutMeItems;
+    const displayedAboutMeItems = isHomePage ? aboutMeItems.slice(0, 4) : aboutMeItems;
 
     return (
         <div className={styles.aboutme}>
