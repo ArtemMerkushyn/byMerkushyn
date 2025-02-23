@@ -39,6 +39,9 @@ export const Main = () => {
                 <section className={styles.aboutme}>
                     <Title text={'About me'} align={'center'}/>
                     <AboutMe/>
+                    <div className={styles.posts__link}>
+                        <Btn3 text={'More about me'} url={'/aboutme'}/>
+                    </div>
                 </section>
             </div>
 

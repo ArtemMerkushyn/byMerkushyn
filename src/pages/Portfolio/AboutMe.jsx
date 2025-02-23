@@ -1,5 +1,6 @@
 import { Btn1 } from '../../components/btns/btn1/Btn1';
 import { Contacts } from '../../components/contacts/Contacts';
+import  { AboutMe as AboutMeComponent }  from '../../components/aboutme/AboutMe.jsx';
 import styles from './aboutme.module.scss';
 
 export default function AboutMe() {
@@ -11,7 +12,8 @@ export default function AboutMe() {
             <Contacts/>
             <a className={styles.aboutme__call} href="tel:+380958827306">+380958827306</a>
             <div className={styles.aboutme__lacation}>Ukraine, Kyiv</div>
+            <AboutMeComponent/>
         </section>
     </div>
-  )
+  );
 }

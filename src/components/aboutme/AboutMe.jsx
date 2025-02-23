@@ -1,9 +1,11 @@
 import { useEffect, useState } from 'react';
 import styles from './aboutme.module.scss';
-import { Btn3 } from '../btns/btn3/Btn3';
+import { useLocation } from 'react-router-dom';
 
 export const AboutMe = () => {
     const [aboutMeItems, setAboutMeItems] = useState([]);
+    const location = useLocation();
+    const isHomePage = location.pathname === '/';
 
     useEffect(() => {
         fetch('/db/aboutme.json')
@@ -14,13 +16,15 @@ export const AboutMe = () => {
             .catch((err) => console.error('Error downloading aboutMeItems :', err))
     }, []);
 
+    const displayedAboutMeItems = isHomePage ? aboutMeItems.slice(-4) : aboutMeItems;
+
     return (
         <div className={styles.aboutme}>
             <p className={styles.aboutme__description}>
                 Я — Full Stack Developer, специализирующийся на стеке MERN (MongoDB, Express, React, Node.js). Занимаюсь созданием веб-приложений, начиная от проектирования базы данных и серверной логики до разработки удобного и современного интерфейса. Для меня важно писать чистый, понятный код и создавать быстрые, эффективные решения.
             </p>
             <div className={styles.aboutme__text}>
-                {aboutMeItems.map((item, index) => (
+                {displayedAboutMeItems.map((item, index) => (
                     <p 
                         key={index}
                         className={index % 2 ? styles.aboutme__right : styles.aboutme__left}
@@ -29,8 +33,8 @@ export const AboutMe = () => {
                         {item.text}
                     </p>
                 ))}
-                <div className={styles.posts__link}>
-                    <Btn3 text={'More about me'} url={'/aboutme'}/>
+                <div className={styles.aboutme__slogan}>
+                    Всегда в поиске лучших решений — в коде и в жизни
                 </div>
             </div>
         </div>
