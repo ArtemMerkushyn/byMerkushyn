@@ -33,9 +33,6 @@ export const AboutMe = () => {
                         {item.text}
                     </p>
                 ))}
-                <div className={styles.aboutme__slogan}>
-                    Всегда в поиске лучших решений — в коде и в жизни
-                </div>
             </div>
         </div>
     )
