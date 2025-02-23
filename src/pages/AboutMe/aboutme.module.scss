@@ -43,3 +43,26 @@
         text-align: center;
     }
 }
+
+
+@media (max-width: 769px) {
+    .aboutme {
+        &__title {
+            font-size: 70px;
+            line-height: 80px;
+        }
+    }
+}
+
+@media (max-width: 500px) {
+    .aboutme {
+        &__title {
+            font-size: $font-size-xxl;
+            line-height: 50px;
+        }
+
+        &__slogan {
+            font-size: $font-size-lg-md;
+        }
+    }
+}
