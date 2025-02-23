@@ -1,5 +1,5 @@
-import { Btn1 } from '../../components/btns/btn1/Btn1';
-import { Contacts } from '../../components/contacts/Contacts';
+import { Btn1 } from '../../components/btns/btn1/Btn1.jsx';
+import { Contacts } from '../../components/contacts/Contacts.jsx';
 import  { AboutMe as AboutMeComponent }  from '../../components/aboutme/AboutMe.jsx';
 import styles from './aboutme.module.scss';
 
