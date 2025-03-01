@@ -32,7 +32,7 @@ export const Projects = () => {
                             <h5 className={styles.project__title}>{project.title}</h5>
                             <div className={styles.project__links}>
                                 <Btn2 text={'visit app website'} url={project.link}/>
-                                <ArrowLink text={'More info'} url={'https://artemmerkushyn.github.io/furni-shop/#hero'}/>
+                                <ArrowLink text={'More info'} url={`/projects/${project._id}`}/>
                             </div>
                         </div>
                     </div> 
