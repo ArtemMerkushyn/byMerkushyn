@@ -1,51 +1,9 @@
 [
     {
-        "_id": "1",
-        "title": "Furni-shop1", 
+        "_id": "65cfa1b2f7e1a2b3h4d5d6f1",
+        "title": "Hygge-Home", 
         "description": "Furni-Shop is a stylish online furniture store focused on creating elegant and functional interiors. The store offers a wide range of home goods, including chairs, lamps, and other decor items. Each product is displayed with images and detailed pricing information, making the selection process convenient and transparent. In addition to the main assortment, the site provides special offers for customers, such as a 1.5% cashback on every furniture purchase and a 30-day interest-free payment period, making purchases not only stylish but also cost-effective. \nFurni-Shop helps its clients create luxurious interiors with the help of professional designers. The company takes pride in the high quality of its furniture, ensuring that every piece has a modern and elegant appearance. The mission of Furni-Shop is to make your home cozy and comfortable by providing access to the best interior design solutions. The website also features special offers and unique discounts, helping customers save on stylish furniture.",
-        "img": "https://raw.githubusercontent.com/ArtemMerkushyn/byMerkushyn/refs/heads/master/public/img/projects/13.png",
-        "link": "https://artemmerkushyn.github.io/furni-shop/#hero"
-    },
-    {
-        "_id": "2",
-        "title": "Furni-shop2", 
-        "description": "Furni-Shop is a stylish online furniture store focused on creating elegant and functional interiors. The store offers a wide range of home goods, including chairs, lamps, and other decor items. Each product is displayed with images and detailed pricing information, making the selection process convenient and transparent. In addition to the main assortment, the site provides special offers for customers, such as a 1.5% cashback on every furniture purchase and a 30-day interest-free payment period, making purchases not only stylish but also cost-effective. \nFurni-Shop helps its clients create luxurious interiors with the help of professional designers. The company takes pride in the high quality of its furniture, ensuring that every piece has a modern and elegant appearance. The mission of Furni-Shop is to make your home cozy and comfortable by providing access to the best interior design solutions. The website also features special offers and unique discounts, helping customers save on stylish furniture.",
-        "img": "https://raw.githubusercontent.com/ArtemMerkushyn/byMerkushyn/refs/heads/master/public/img/projects/13.png",
-        "link": "https://artemmerkushyn.github.io/furni-shop/#hero"
-    },
-    {
-        "_id": "3",
-        "title": "Furni-shop3", 
-        "description": "Furni-Shop is a stylish online furniture store focused on creating elegant and functional interiors. The store offers a wide range of home goods, including chairs, lamps, and other decor items. Each product is displayed with images and detailed pricing information, making the selection process convenient and transparent. In addition to the main assortment, the site provides special offers for customers, such as a 1.5% cashback on every furniture purchase and a 30-day interest-free payment period, making purchases not only stylish but also cost-effective. \nFurni-Shop helps its clients create luxurious interiors with the help of professional designers. The company takes pride in the high quality of its furniture, ensuring that every piece has a modern and elegant appearance. The mission of Furni-Shop is to make your home cozy and comfortable by providing access to the best interior design solutions. The website also features special offers and unique discounts, helping customers save on stylish furniture.",
-        "img": "https://raw.githubusercontent.com/ArtemMerkushyn/byMerkushyn/refs/heads/master/public/img/projects/13.png",
-        "link": "https://artemmerkushyn.github.io/furni-shop/#hero"
-    },
-    {
-        "_id": "4",
-        "title": "Furni-shop4", 
-        "description": "Furni-Shop is a stylish online furniture store focused on creating elegant and functional interiors. The store offers a wide range of home goods, including chairs, lamps, and other decor items. Each product is displayed with images and detailed pricing information, making the selection process convenient and transparent. In addition to the main assortment, the site provides special offers for customers, such as a 1.5% cashback on every furniture purchase and a 30-day interest-free payment period, making purchases not only stylish but also cost-effective. \nFurni-Shop helps its clients create luxurious interiors with the help of professional designers. The company takes pride in the high quality of its furniture, ensuring that every piece has a modern and elegant appearance. The mission of Furni-Shop is to make your home cozy and comfortable by providing access to the best interior design solutions. The website also features special offers and unique discounts, helping customers save on stylish furniture.",
-        "img": "https://raw.githubusercontent.com/ArtemMerkushyn/byMerkushyn/refs/heads/master/public/img/projects/13.png",
-        "link": "https://artemmerkushyn.github.io/furni-shop/#hero"
-    },
-    {
-        "_id": "5",
-        "title": "Furni-shop5", 
-        "description": "Furni-Shop is a stylish online furniture store focused on creating elegant and functional interiors. The store offers a wide range of home goods, including chairs, lamps, and other decor items. Each product is displayed with images and detailed pricing information, making the selection process convenient and transparent. In addition to the main assortment, the site provides special offers for customers, such as a 1.5% cashback on every furniture purchase and a 30-day interest-free payment period, making purchases not only stylish but also cost-effective. \nFurni-Shop helps its clients create luxurious interiors with the help of professional designers. The company takes pride in the high quality of its furniture, ensuring that every piece has a modern and elegant appearance. The mission of Furni-Shop is to make your home cozy and comfortable by providing access to the best interior design solutions. The website also features special offers and unique discounts, helping customers save on stylish furniture.",
-        "img": "https://raw.githubusercontent.com/ArtemMerkushyn/byMerkushyn/refs/heads/master/public/img/projects/13.png",
-        "link": "https://artemmerkushyn.github.io/furni-shop/#hero"
-    },
-    {
-        "_id": "6",
-        "title": "Furni-shop6", 
-        "description": "Furni-Shop is a stylish online furniture store focused on creating elegant and functional interiors. The store offers a wide range of home goods, including chairs, lamps, and other decor items. Each product is displayed with images and detailed pricing information, making the selection process convenient and transparent. In addition to the main assortment, the site provides special offers for customers, such as a 1.5% cashback on every furniture purchase and a 30-day interest-free payment period, making purchases not only stylish but also cost-effective. \nFurni-Shop helps its clients create luxurious interiors with the help of professional designers. The company takes pride in the high quality of its furniture, ensuring that every piece has a modern and elegant appearance. The mission of Furni-Shop is to make your home cozy and comfortable by providing access to the best interior design solutions. The website also features special offers and unique discounts, helping customers save on stylish furniture.",
-        "img": "https://raw.githubusercontent.com/ArtemMerkushyn/byMerkushyn/refs/heads/master/public/img/projects/13.png",
-        "link": "https://artemmerkushyn.github.io/furni-shop/#hero"
-    },
-    {
-        "_id": "7",
-        "title": "Furni-shop7", 
-        "description": "Furni-Shop is a stylish online furniture store focused on creating elegant and functional interiors. The store offers a wide range of home goods, including chairs, lamps, and other decor items. Each product is displayed with images and detailed pricing information, making the selection process convenient and transparent. In addition to the main assortment, the site provides special offers for customers, such as a 1.5% cashback on every furniture purchase and a 30-day interest-free payment period, making purchases not only stylish but also cost-effective. \nFurni-Shop helps its clients create luxurious interiors with the help of professional designers. The company takes pride in the high quality of its furniture, ensuring that every piece has a modern and elegant appearance. The mission of Furni-Shop is to make your home cozy and comfortable by providing access to the best interior design solutions. The website also features special offers and unique discounts, helping customers save on stylish furniture.",
-        "img": "https://raw.githubusercontent.com/ArtemMerkushyn/byMerkushyn/refs/heads/master/public/img/projects/13.png",
+        "img": "https://hygge-home.vercel.app/images/hero/Hero-people.png",
         "link": "https://artemmerkushyn.github.io/furni-shop/#hero"
     }
 ]

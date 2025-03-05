@@ -21,13 +21,13 @@ export const AboutMe = () => {
     return (
         <div className={styles.aboutme}>
             <p className={styles.aboutme__description}>
-                Я — Full Stack Developer, специализирующийся на стеке MERN (MongoDB, Express, React, Node.js). Занимаюсь созданием веб-приложений, начиная от проектирования базы данных и серверной логики до разработки удобного и современного интерфейса. Для меня важно писать чистый, понятный код и создавать быстрые, эффективные решения.
+                Я — Machine Learning Engineer, специализирующийся на создании и обучении моделей машинного обучения. Занимаюсь разработкой алгоритмов, начиная от подготовки данных и выбора модели до оптимизации и внедрения в реальную среду. Для меня важно создавать умные и эффективные решения, которые изменяют мир к лучшему.
             </p>
             <div className={styles.aboutme__text}>
                 {displayedAboutMeItems.map((item, index) => (
                     <p 
                         key={index}
-                        className={index % 2 ? styles.aboutme__right : styles.aboutme__left}
+                        className={index % 2 ? styles.aboutme__left : styles.aboutme__right}
                         data-title = {item.title}
                         >
                         {item.text}

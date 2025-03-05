@@ -21,7 +21,7 @@ export const Main = () => {
                     <div className={styles.hero__content}>
                         <span>Hi, I'm</span>
                         <h1>Artem<br/>Merkushyn</h1>
-                        <p>Full stack developer, developing web applications from idea to implementation</p>
+                        <p>Machine Learning Engineer, training algorithms to make the world smarter tomorrow.</p>
                     </div>
                     <Btn1 text={'Take a look at GitHub'} url={'https://github.com/ArtemMerkushyn'}/>
                     <Contacts/>
